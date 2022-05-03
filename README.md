@@ -1,1 +1,1 @@
-A repository for java tutorials
+A repository for advanced java tutorials
