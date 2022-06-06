@@ -38,7 +38,7 @@ public class GetTheStock implements Runnable{
                 // Use Thread.sleep(startTime * 1000); to
                 // make sleep time variable
             }
-            catch(InterruptedException e)
+            catch(InterruptedException ignored)
             {}
 
             // Generates a random number between -.03 and .03
