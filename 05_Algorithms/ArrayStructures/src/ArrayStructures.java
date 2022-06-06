@@ -52,21 +52,83 @@ public class ArrayStructures {
 
     public String linearSearchForValue(int value) {
         boolean valueInArray = false;
-        String indexsWithValue = "";
+        String indexWithValue = "";
         System.out.println("The value was found the the following: ");
 
         for(int i = 0; i < arraySize; i++) {
             if(theArray[i] == value) {
                 valueInArray = true;
                 System.out.print(i + " ");
-                indexsWithValue += i + " ";
+                indexWithValue += i + " ";
             }
         }
         if(!valueInArray) {
-            indexsWithValue = "None";
-            System.out.println(indexsWithValue);
+            indexWithValue = "None";
+            System.out.println(indexWithValue);
         }
         System.out.println();
-        return indexsWithValue;
+        return indexWithValue;
+    }
+
+    public void printHorzArray(int i, int j){
+
+        for(int n = 0; n < 51; n++)System.out.print("-");
+
+        System.out.println();
+
+        for(int n = 0; n < arraySize; n++){
+
+            System.out.print("| " + n + "  ");
+
+        }
+
+        System.out.println("|");
+
+        for(int n = 0; n < 51; n++)System.out.print("-");
+
+        System.out.println();
+
+        for(int n = 0; n < arraySize; n++){
+
+            System.out.print("| " + theArray[n] + " ");
+
+        }
+
+        System.out.println("|");
+
+        for(int n = 0; n < 51; n++)System.out.print("-");
+
+        System.out.println();
+
+        // END OF FIRST PART
+
+
+        // ADDED FOR BUBBLE SORT
+
+        if(j != -1){
+
+            // ADD THE +2 TO FIX SPACING
+
+            for(int k = 0; k < ((j*5)+2); k++)System.out.print(" ");
+
+            System.out.print(j);
+
+        }
+
+
+        // THEN ADD THIS CODE
+
+        if(i != -1){
+
+            // ADD THE -1 TO FIX SPACING
+
+            for(int l = 0; l < (5*(i - j)-1); l++)System.out.print(" ");
+
+            System.out.print(i);
+
+        }
+
+        System.out.println();
+
     }
 }
